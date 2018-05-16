@@ -16,8 +16,6 @@ public class ImageDownloader {
         lines.add(next);
       }
     }
-    // Iterator<String> itr = new lines.iterator();
-    // int i = 0;
     for (int i = 0; i < lines.size(); i++) {
       String website = lines.get(i);
       try (InputStream in = new URL("" + website).openStream()) {
@@ -26,7 +24,6 @@ public class ImageDownloader {
       } catch (Exception e) {
 
       }
-      // i++;
     }
   }
 }
