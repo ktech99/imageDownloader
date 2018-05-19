@@ -12,7 +12,7 @@ public class ImageDownloader {
     List<String> lines = new ArrayList<>();
     while (input.hasNextLine()) {
       String next = input.nextLine().trim();
-      if (next.length() > 0) {
+      if (next.length() > 0 && next.endsWith(".jpg")) {
         lines.add(next);
       }
     }
@@ -22,7 +22,6 @@ public class ImageDownloader {
         Files.copy(in, Paths.get("C:\\Users\\karti\\Desktop\\image\\" + i + ".jpg"));
         System.out.println(i);
       } catch (Exception e) {
-
       }
     }
   }
