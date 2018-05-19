@@ -34,23 +34,12 @@ public class ImageDownloader {
           in.close();
 
         } else {
-          // while(System.currentTimeMillis() <= end + 1000 ){}
-
           Files.copy(in, Paths.get("\\Users\\kartikar\\Desktop\\compost\\" + i + ".jpg"));
           in.close();
           System.out.println(i);
         }
       } catch (Exception e) {
       }
-    }
-  }
-
-  public static boolean isConnected(URLConnection con) {
-    try {
-      con.setDoOutput(con.getDoOutput()); // throws IllegalStateException if connected
-      return false;
-    } catch (IllegalStateException e) {
-      return true;
     }
   }
 }
